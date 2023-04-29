@@ -1,8 +1,12 @@
-import { Link, useRouter } from "expo-router";
-import { View, Pressable, Text } from "react-native";
-// import styles from "../styles/index";
+import { useState } from "react";
+import { useRouter } from "expo-router";
+import { View, Image, SafeAreaView, TextInput } from "react-native";
+import { Button } from "@rneui/themed";
+import styles from "../styles/index";
 
 export default function LoginPage() {
+  const [text, setText] = useState("Username");
+  const [password, setPassword] = useState("Password");
   const router = useRouter();
 
   const handleLogin = () => {
@@ -10,18 +14,16 @@ export default function LoginPage() {
   };
 
   return (
-    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <Pressable onPress={handleLogin}>
-        <Text>Login</Text>
-      </Pressable>
+    <View style={styles.container}>
+      <Image style={styles.logoImage} source={require("../assets/logo.png")} />
 
-      <Link href="/register" asChild>
-        <Pressable>
-          <Text>Create account</Text>
-        </Pressable>
-      </Link>
+      <SafeAreaView>
+        <TextInput style={styles.input} onChangeText={setText} value={text} />
+        <TextInput style={styles.input} onChangeText={setPassword} value={password} />
+      </SafeAreaView>
 
-      {/* <Link href="/test">Unmatched route</Link> */}
+      <Button title="Login" onPress={handleLogin} style={styles.logBtn} radius={"sm"} />
+      <Button title="Create account" onPress={() => router.push("/register")} style={styles.regBtn} radius={"sm"} />
     </View>
   );
 }

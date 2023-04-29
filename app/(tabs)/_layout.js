@@ -3,7 +3,13 @@ import { FontAwesome5 } from "@expo/vector-icons";
 
 export default () => {
   return (
-    <Tabs>
+    <Tabs
+      screenOptions={{
+        headerStyle: { backgroundColor: "#0d4969" },
+        headerTintColor: "#e6e6e6",
+        headerTitleStyle: { fontWeight: "bold" },
+      }}
+    >
       <Tabs.Screen
         name="home"
         options={{

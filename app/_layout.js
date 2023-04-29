@@ -7,8 +7,8 @@ export default function StackLayout() {
   return (
     <Stack
       screenOptions={{
-        headerStyle: { backgroundColor: "#10101E" },
-        headerTintColor: "#fff",
+        headerStyle: { backgroundColor: "#0d4969" },
+        headerTintColor: "#e6e6e6",
         headerTitleStyle: { fontWeight: "bold" },
       }}
     >
