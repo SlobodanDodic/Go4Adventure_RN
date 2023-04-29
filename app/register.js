@@ -1,8 +1,7 @@
-import { View, Text, ViewBase } from "react-native";
 import { useState } from "react";
 import { useRouter } from "expo-router";
-import { Button } from "@rneui/themed";
 import { SafeAreaView, TextInput, Image } from "react-native";
+import { Button } from "react-native-paper";
 import styles from "../styles/register";
 
 export default function RegisterPage() {
@@ -26,7 +25,16 @@ export default function RegisterPage() {
       <TextInput style={styles.input} onChangeText={setPassword} value={password} />
       <TextInput style={styles.input} onChangeText={setConfirmPassword} value={confirmPassword} />
 
-      <Button title="Login" onPress={handleLogin} style={styles.logBtn} radius={"sm"} />
+      <Button
+        onPress={handleLogin}
+        style={styles.logBtn}
+        mode="contained"
+        icon="login"
+        textColor="white"
+        buttonColor="#0d4969"
+      >
+        Login
+      </Button>
     </SafeAreaView>
   );
 }

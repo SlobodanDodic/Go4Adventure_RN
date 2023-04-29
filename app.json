@@ -8,7 +8,8 @@
     "slug": "Go4Adventure_RN",
     "splash": {
       "image": "./assets/logo.png",
-      "resizeMode": "contain"
+      "resizeMode": "contain",
+      "width": 200
     }
   }
 }
