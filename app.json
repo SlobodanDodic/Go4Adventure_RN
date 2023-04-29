@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "scheme": "acme",
+    "web": {
+      "bundler": "metro"
+    },
+    "name": "Go4Adventure_RN",
+    "slug": "Go4Adventure_RN"
+  }
+}
