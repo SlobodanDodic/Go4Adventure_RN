@@ -12,11 +12,7 @@ const styles = StyleSheet.create({
     border: "1px solid lightgray",
   },
   safeview: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-    marginVertical: 20,
-    margin: 10,
+    margin: 20,
   },
 });
 

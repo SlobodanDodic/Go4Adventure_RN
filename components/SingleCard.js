@@ -60,7 +60,7 @@ export default function SingleCard({ el }) {
             expanded={expanded}
             onPress={handlePress}
             left={(props) => <List.Icon {...props} icon="information" />}
-            titleStyle={{ fontWeight: "500", color: "#424243", fontSize: "15px" }}
+            titleStyle={{ fontWeight: "500", color: "#424243", fontSize: 15 }}
           >
             <Text variant="labelSmall" style={styles.text}>
               {el.text}
@@ -108,7 +108,7 @@ const styles = StyleSheet.create({
   },
   comment: {
     fontWeight: "thin",
-    letterSpacing: "1px",
+    letterSpacing: 1,
     color: "#757575",
     textAlign: "center",
     fontStyle: "italic",

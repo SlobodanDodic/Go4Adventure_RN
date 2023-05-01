@@ -21,18 +21,17 @@ export default function Home() {
           onChangeText={onChangeSearch}
           value={searchQuery}
         />
-        <SafeAreaView style={styles.safeview}>
-          <SegmentedButtons
-            value={value}
-            onValueChange={setValue}
-            checkedColor="#b2b2b2"
-            buttons={[
-              { value: "land", label: "Land", icon: "tree" },
-              { value: "water", label: "Water", icon: "fish" },
-              { value: "aerial", label: "Aerial&Extreme", icon: "bird" },
-            ]}
-          />
-        </SafeAreaView>
+        <SegmentedButtons
+          style={styles.safeview}
+          value={value}
+          onValueChange={setValue}
+          checkedColor="#b2b2b2"
+          buttons={[
+            { value: "land", label: "Land", icon: "tree" },
+            { value: "water", label: "Water", icon: "fish" },
+            { value: "aerial", label: "Aerial&Extreme", icon: "bird" },
+          ]}
+        />
       </View>
 
       <ScrollView>
