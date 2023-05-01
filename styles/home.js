@@ -4,12 +4,19 @@ const { width, height } = Dimensions.get("window");
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginTop: 30,
   },
   search: {
     marginHorizontal: 20,
+    marginTop: 20,
     backgroundColor: "white",
     border: "1px solid lightgray",
+  },
+  safeview: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+    marginVertical: 20,
+    margin: 10,
   },
 });
 
