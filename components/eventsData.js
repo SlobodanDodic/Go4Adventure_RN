@@ -7,7 +7,10 @@ export const data = [
     comment: "Unforgettable experience!",
     coverImg:
       "https://images.unsplash.com/photo-1551632811-561732d1e306?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
-    images: ["../assets/images/hiking.jpg", "../assets/images/rest.jpg"],
+    images: [
+      "https://images.unsplash.com/photo-1565639828644-ff8e088ebfa8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1548&q=80",
+      "https://images.unsplash.com/photo-1565639828644-ff8e088ebfa8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1548&q=80",
+    ],
     category: "Trekking and Hiking",
     subcategory: "Multi-day treks hikes",
     price: "120",
@@ -16,6 +19,10 @@ export const data = [
     date: "May 14th 2023",
     length: "4",
     age: "7-77",
+    location: {
+      latitude: 43.737259,
+      longitude: 18.56749,
+    },
   },
   {
     id: 2,
@@ -34,6 +41,10 @@ export const data = [
     date: "May 14th 2023",
     length: "4",
     age: "7-77",
+    location: {
+      latitude: 43.737259,
+      longitude: 28.56749,
+    },
   },
   {
     id: 3,
@@ -52,6 +63,10 @@ export const data = [
     date: "May 14th 2023",
     length: "4",
     age: "7-77",
+    location: {
+      latitude: 42.439999,
+      longitude: 19.812,
+    },
   },
   {
     id: 4,
@@ -70,5 +85,9 @@ export const data = [
     date: "May 14th 2023",
     length: "4",
     age: "7-77",
+    location: {
+      latitude: 43.219978,
+      longitude: 22.312321,
+    },
   },
 ];

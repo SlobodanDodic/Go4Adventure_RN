@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
     padding: 24,
   },
   logoImage: {
-    width: width - 47,
+    width: width * 0.75,
     resizeMode: "contain",
   },
   input: {

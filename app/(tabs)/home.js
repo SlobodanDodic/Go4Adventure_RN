@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Searchbar, SegmentedButtons } from "react-native-paper";
-import { ScrollView, View, SafeAreaView } from "react-native";
+import { ScrollView, View } from "react-native";
 import SingleCard from "../../components/SingleCard";
 import { data } from "../../components/eventsData";
 import styles from "../../styles/home";

@@ -1,11 +1,14 @@
 import { Avatar, List, Card, Text, Button, Chip, DataTable } from "react-native-paper";
+import { useRouter } from "expo-router";
 import { StyleSheet, View } from "react-native";
 import { useState } from "react";
 import CarouselView from "./CarouselView";
+import ModalPayment from "./ModalPayment";
 
 export default function SingleCard({ el }) {
   const [expanded, setExpanded] = useState(false);
   const handlePress = () => setExpanded(!expanded);
+  const router = useRouter();
 
   let iconColor;
   if (el.icon === "tree") {
@@ -22,7 +25,7 @@ export default function SingleCard({ el }) {
 
   return (
     <Card style={styles.container}>
-      <Card.Title title={el.title} left={IconContent} titleVariant="titleMedium" titleNumberOfLines="2" />
+      <Card.Title title={el.title} left={IconContent} titleVariant="titleMedium" titleNumberOfLines={2} />
 
       <Text variant="labelLarge" style={styles.comment}>
         "{el.comment}"
@@ -50,6 +53,8 @@ export default function SingleCard({ el }) {
             Level: {el.level}/10
           </Chip>
         </View>
+
+        <ModalPayment />
       </Card.Content>
 
       <Card.Actions style={styles.action}>
@@ -68,14 +73,6 @@ export default function SingleCard({ el }) {
 
             <CarouselView images={el.images} />
 
-            {/* <Button
-              icon="map-marker"
-              mode="text"
-              onPress={() => console.log("Pressed")}
-              style={{ paddingLeft: 0, padding: 5 }}
-            >
-              More about dates & locations
-            </Button> */}
             <DataTable style={{ marginTop: 10, paddingLeft: 0 }}>
               <DataTable.Row>
                 <DataTable.Cell>Starts:</DataTable.Cell>
@@ -90,6 +87,15 @@ export default function SingleCard({ el }) {
                 <DataTable.Cell>{el.age} years old</DataTable.Cell>
               </DataTable.Row>
             </DataTable>
+
+            <Button
+              icon="map-marker"
+              mode="text"
+              onPress={() => router.push("/map")}
+              style={{ paddingLeft: 0, paddingTop: 10 }}
+            >
+              Check the location!
+            </Button>
           </List.Accordion>
         </List.Section>
       </Card.Actions>

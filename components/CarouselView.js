@@ -19,7 +19,6 @@ function CarouselView({ images }) {
         onSnapToItem={(index) => console.log("current index:", index)}
         renderItem={({ index }) => (
           <View style={{ flex: 1, borderWidth: 1, justifyContent: "center" }}>
-            {/* <Image source={images} /> */}
             <Text style={{ textAlign: "center", fontSize: 30 }}>{index}</Text>
           </View>
         )}

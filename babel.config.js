@@ -6,6 +6,19 @@ module.exports = function (api) {
       "@babel/plugin-proposal-export-namespace-from",
       "react-native-reanimated/plugin",
       require.resolve("expo-router/babel"),
+      [
+        "module:react-native-dotenv",
+        {
+          safe: true,
+        },
+      ],
+      // [
+      //   "@stripe/stripe-react-native",
+      //   {
+      //     merchantIdentifier: string | string[string],
+      //     enableGooglePay: boolean,
+      //   },
+      // ],
     ],
   };
 };

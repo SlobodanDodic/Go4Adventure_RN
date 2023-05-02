@@ -1,9 +1,6 @@
-import { Stack, useRouter } from "expo-router";
-import { Button } from "react-native";
+import { Stack } from "expo-router";
 
 export default function StackLayout() {
-  const router = useRouter();
-
   return (
     <Stack
       screenOptions={{
@@ -13,26 +10,8 @@ export default function StackLayout() {
       }}
     >
       <Stack.Screen name="index" options={{ headerTitle: "Login", headerShown: false }} />
-      <Stack.Screen
-        name="register"
-        options={{
-          headerTitle: "Create account",
-          headerRight: () => <Button title="Open" onPress={() => router.push("/modal")} />,
-        }}
-      />
-      <Stack.Screen
-        name="modal"
-        options={{
-          presentation: "modal",
-          headerLeft: () => <Button title="Close" onPress={() => router.back()} />,
-        }}
-      />
-      <Stack.Screen
-        name="(tabs)"
-        options={{
-          headerShown: false,
-        }}
-      />
+      <Stack.Screen name="register" options={{ headerTitle: "Create account" }} />
+      <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
     </Stack>
   );
 }
