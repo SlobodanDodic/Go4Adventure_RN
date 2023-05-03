@@ -5,10 +5,19 @@
       "bundler": "metro"
     },
     "name": "Go4Adventure_RN",
-    "slug": "Go4Adventure_RN",
+    "slug": "go4adventure",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "799fd377-f33c-415a-9e1e-c276ef12ed0c"
+      }
+    },
+    "owner": "boban47",
+    "android": {
+      "package": "com.boban47.go4adventure"
     }
   }
 }

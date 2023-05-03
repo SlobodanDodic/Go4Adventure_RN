@@ -83,8 +83,8 @@ export default function SingleCard({ el }) {
                 <DataTable.Cell>{el.length} days</DataTable.Cell>
               </DataTable.Row>
               <DataTable.Row>
-                <DataTable.Cell>Age range:</DataTable.Cell>
-                <DataTable.Cell>{el.age} years old</DataTable.Cell>
+                <DataTable.Cell>Additional Info:</DataTable.Cell>
+                <DataTable.Cell>{el.additionalInfo}</DataTable.Cell>
               </DataTable.Row>
             </DataTable>
 
